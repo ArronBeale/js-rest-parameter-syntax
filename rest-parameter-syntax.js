@@ -23,3 +23,16 @@ const sumRest = (a, b, c, ...rest) => {
 
 let sum3 = sumRest(1, 2, 3, 4, 5, 6);
 console.log('Sum3:', sum3);
+
+// Usage of ...rest
+let mixedLetters = ['b', 'd', 'a', 'c', 'f', 'e'];
+let moreMixedLetters = [...mixedLetters, 'h','k','g','j','i','l'];
+console.log(moreMixedLetters);
+
+const updateSortReverse = (arr, ...letters) => {
+    let arr1 = [...arr, ...letters].sort().reverse();
+    return arr1;
+}
+
+let reverseSort = updateSortReverse(moreMixedLetters, 'n', 'm', 'o');
+console.log(reverseSort);
